@@ -39,4 +39,4 @@ https://dribbble.com/shots/6595597-Keyhub-Login-and-Onboarding
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/Rafaelaltieris/AgendaMedica.git
+   git clone https://github.com/Rafaelaltieris/Agenda.git
