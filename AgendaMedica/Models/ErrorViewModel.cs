@@ -1,4 +1,4 @@
-namespace AgendaMedica.Models
+﻿namespace AgendaMedica.Models
 {
     public class ErrorViewModel
     {

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<AgendaMedica.Models.Agenda>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container text-light mt-5">
+    <h1 class="text-center display-5">Cadastro de <span class="fw-bold">Agendamentos</span></h1>
+<p>
+    <a asp-action="Create" class="btn btn-outline-light btn-lg w-25">Adicionar Novo Agendamento</a>
+</p>
+<table class="table table-light table-striped table-borderless">
+    <thead>
+        <tr>
+            <th class="text-black">
+                @Html.DisplayNameFor(model => model.Paciente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Medico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataConsulta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Paciente.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Medico.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataConsulta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td class="text-center">
+                <a asp-action="Edit" asp-route-id="@item.AgendaId"
+                    class="btn btn-sm btn-warning me-2 d-inline-flex align-items-center">
+                    Editar
+                </a>
+                <a asp-action="Delete" asp-route-id="@item.AgendaId"
+                    class="btn btn-sm btn-danger d-inline-flex align-items-center">
+                    Deletar
+                </a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+</div>
